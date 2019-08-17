@@ -3,6 +3,6 @@ describe('Protractor Demo App', function() {
     browser.get('http://juliemr.github.io/protractor-demo/');
 
     expect(browser.getTitle()).toEqual('Super Calculator');
-	browser.sleep(50000)
+	
   });
 });
