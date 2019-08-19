@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConfigSettings>
+  <AppSettings>
+    <TestDriver>
+      <Name>protractor</Name>
+	  <!--PackageLocation>D:\Source\ProductBase\TestAutomation\Kognifai\PoCs\TestRunner\CodedUITestProject1\protractor_auto_2</PackageLocation-->
+      <!--PackageLocation>D:\Explore\TROS\Source11\ProductBase\TestAutomation\Kognifai\Branches\Dev</PackageLocation-->
+	  <PackageLocation>C:\ProtractorDemo\Stepin</PackageLocation>
+    </TestDriver>
+    <TestListGenerator>
+		<UseExistingList>false</UseExistingList>
+	</TestListGenerator>
+	<IncludeSpecs Active="true">
+	<Specs>spec</Specs>
+	</IncludeSpecs>
+	<ExcludeSpecs Active="false">
+	    <Specs>sitecom-viewer\realtime\RealTimeLogWidget</Specs>
+		<Specs>sitecom-viewer\change-logs\CL_WidgetsSpec</Specs>
+		<Specs>sitecom-viewer\change-logs\CL_MyWellsSpec</Specs>
+     	<Specs>sitecom-viewer\change-logs\CL_TrajectorySpec</Specs>
+	</ExcludeSpecs>
+    <RunModules Active="false">     
+      <Module>TROSDemo/Features</Module>
+	  <Module>TROSDemo</Module>
+    </RunModules>
+	<CrossBrowser>
+		<Active>chrome</Active><!--valid : chrome, firefox, ie-->
+		<Platform></Platform><!--valid : Android-->
+	</CrossBrowser>
+    <Recovery>
+      <Retries>0</Retries>
+    </Recovery>
+	<TestTimeout>7</TestTimeout>
+    <TestResultReporter>Allure</TestResultReporter>
+	<DevOps>
+		<Jenkins>
+			<Server></Server>
+			<Port></Port>
+		</Jenkins>
+		<VSTS>
+			<Server></Server>
+			<Port></Port>
+		</VSTS>
+	</DevOps>
+	<Email Active="true">
+		<SMTP>smtpmail.kongsberg.master.int</SMTP>'
+		<SubjectLine>TROS - Automated Test Result - TROS Features Demo</SubjectLine>
+		<Sender>mohamed.yusuf@kdi.kongsberg.com</Sender>
+		<Receivers>
+			<Receiver>mohamed.yusuf@kdi.kongsberg.com</Receiver>
+			<!--Receiver>anuvrat.singh @kdi.kongsberg.com</Receiver-->
+			<!-- <Receiver>prashant.singh@kdi.kongsberg.com</Receiver>
+			<Receiver>guru.s.hanji@kdi.kongsberg.com</Receiver>
+			<Receiver>nandini.k@kdi.kongsberg.com</Receiver>
+			<Receiver>deepa.sharma@kdi.kongsberg.com</Receiver>
+			<Receiver>singh.s.vikramaditya@kdi.kongsberg.com</Receiver>
+			<Receiver>anshul.lalit@kdi.kongsberg.com</Receiver>
+			<Receiver>murali.mohan.pallanti@kdi.kongsberg.com</Receiver>
+			<Receiver>bhaskara.rao.mannepu@kdi.kongsberg.com</Receiver>
+			<Receiver>venkata.subbaiah.mada@kdi.kongsberg.com</Receiver> -->
+			<!-- <Receiver>venkata.subbaiah.mada@kdi.kongsberg.com</Receiver> --> 
+			<!--Receiver></Receiver>prashant.singh @kdi.kongsberg.com
+			<Receiver>guru.s.hanji @kdi.kongsberg.com</Receiver-->
+		</Receivers>
+	</Email>
+  </AppSettings>
+</ConfigSettings>
