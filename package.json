@@ -1,0 +1,44 @@
+{
+  "name": "kognifai-automation-framework",
+  "version": "2.0.0",
+  "description": "Protractor automation helper apis",
+  "main": "build/index.js",
+  "dependencies": {
+    "@types/selenium-webdriver": "~2.53.39",
+    "adm-zip": "^0.4.7",
+    "allure-commandline": "^2.9.0",
+    "deasync": "^0.1.10",
+    "file-exists": "^3.0.2",
+    "fs-extra": "^2.1.2",
+    "glob": "^7.1.2",
+    "jsonfile": "^4.0.0",
+    "moment": "^2.20.1",
+    "pngjs": "^3.2.0",
+    "protractor": "^5.4.2",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.43",
+    "@types/node": "^7.0.5",
+    "jasmine-allure-reporter": "^1.0.1",
+    "jasmine-reporters": "^2.2.1",
+    "jasmine-spec-reporter": "^4.2.1",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "clean": "rimraf build",
+    "tsc": "tsc",
+    "build": "npm run clean & npm run tsc",
+    "pretest": "npm run build & mkdirp logs",
+    "test": "protractor build/config.js"
+  },
+  "keywords": [
+    "Protractor",
+    "Typescript"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://kdi.jfrog.io/kdi/api/npm/npm-local/"
+  }
+}

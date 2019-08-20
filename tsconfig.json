@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": [
+      "jasmine",
+      "node"
+    ],
+    "lib": [
+      "es5",
+      "es6"
+    ],
+    "allowJs": false,
+    "rootDir": "src/",
+    "outDir": "build-js",
+    "baseUrl": ".",
+    "paths": {
+      "#root": [
+        "."
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}

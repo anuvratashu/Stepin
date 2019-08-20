@@ -1,0 +1,1 @@
+﻿Get-Process -Name 'chromedriver*','geckodriver*','IEDriverServer*' | Stop-Process -Force
