@@ -97,7 +97,7 @@ export let config: Config =
     // },
 
     multiCapabilities: [
-        capabilitiesMap.chrome, capabilitiesMap.android
+        /* capabilitiesMap.chrome, */ capabilitiesMap.android
     ],
 
     //directConnect: true,
@@ -121,6 +121,6 @@ export let config: Config =
         baseDir: __dirname,
     },
     specs: [
-        './specs/**.js',
+        './specs/H*.js',
     ]
 }

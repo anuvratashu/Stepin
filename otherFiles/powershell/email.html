@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <title>Execution Report</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+</head>
+
+<body class="em_body" style="margin:0px; padding:0px;" bgcolor="#efefef">
+    <table class="em_full_wrap" valign="top" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#efefef"
+        align="center">
+        <tbody>
+            <tr>
+                <td valign="top" align="center">
+                    <table class="em_main_table" style="width:700px;" width="700" cellspacing="0" cellpadding="0"
+                        border="0" align="center">
+                        <!--Header section-->
+                        <tbody>
+                            <tr>
+                                <td style="padding:15px;" class="em_padd" valign="top" bgcolor="#f6f7f8" align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-family:'Open Sans', Arial, sans-serif; font-size:20px; line-height:15px; color:#160d21;"
+                                                    valign="top" align="center">Automated UI Tests Execution Report</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr id="complete">
+                                <td style="padding:35px 70px 30px;" class="em_padd" valign="top" bgcolor="#0d1121"
+                                    align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-family:'Open Sans', Arial, sans-serif; font-size:18px; line-height:30px; color:#f4f807;"
+                                                    valign="top" align="center">Automation Test Run is complete for
+                                                    <span id="appName"></span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td height="15" align="center">
+                                                    <span style='font-size:60px;'>&#9989;</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size:0px; line-height:0px; height:15px;" height="15">
+                                                    &nbsp;</td>
+                                            </tr>
+
+                                            <tr id="testDetails">
+                                                <td align="center">
+                                                    <div
+                                                        style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:22px; color:#4a9fff; letter-spacing:2px;">
+                                                        <h3>
+                                                            Test Cases: <span id="tcc"
+                                                                style="color:#ffb23e;"></span><br>
+                                                            Duration: <span id="dur" style="color:#ffb23e;"></span><br>
+                                                            <span>Failed Count: <span id="fc"
+                                                                    style="color:rgb(255, 0, 0);"></span></span>
+                                                            <span style="color:rgb(255, 255, 255)"> ;</span>
+                                                            <span>Skipped: <span id="sc"
+                                                                    style="color:rgb(119, 119, 119);"></span></span>
+                                                        </h3>
+                                                        <h1 style="font-size:30px;color:#ffffff;"> <span
+                                                                id="passedPercent"></span>%
+                                                            Passed</h1>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="testDetails">
+                                                <td>
+                                                    <table align="center">
+                                                        <tr>
+                                                            <td><span id="passGrph"
+                                                                    style="background-color: rgb(004, 128, 31);color:rgb(004, 128, 031)"></span>
+                                                                <span id="failGrph"
+                                                                    style="background-color: rgb(241, 12, 12);color: rgb(241, 012, 012)"></span>
+                                                                <span id="skipGrph"
+                                                                    style="background-color: rgb(119, 119, 119);color: rgb(119, 119, 119)"></span>
+                                                                <span id="otherGrph"
+                                                                    style="background-color: rgb(255, 2, 255);color: rgb(255, 002, 255)"></span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size:0px; line-height:0px; height:15px;" height="15">
+                                                    &nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-family:'Open Sans', Arial, sans-serif; font-size:16px; line-height:22px; color:#07d4f8; letter-spacing:2px; padding-bottom:12px;"
+                                                    valign="top" align="center">Please use the below link to view the
+                                                    Execution Report</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-family:'Open Sans', Arial, sans-serif; font-size:16px; line-height:22px; letter-spacing:1px; padding-bottom:12px;"
+                                                    valign="top" align="center"> <a id="reportLink"
+                                                        style="color:#ffb23e">Report Link</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr id="abandon">
+                                <td style="padding:35px 70px 30px;" class="em_padd" valign="top" bgcolor="#0d1121"
+                                    align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-family:'Open Sans', Arial, sans-serif; font-size:18px; line-height:30px; color:#f4f807;"
+                                                    valign="top" align="center">Automation Test Execution was abandaned
+                                                    for
+                                                    <span id="appName"></span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td height="15" align="center">
+                                                    <span style='font-size:60px;'>&#9940;</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="font-size:0px; line-height:0px; height:15px;" height="15">
+                                                    &nbsp;</td>
+                                            </tr>
+
+                                            <tr id="testDetails">
+                                                <td align="center">
+                                                    <div
+                                                        style="font-family:'Open Sans', Arial, sans-serif; font-size:14px; line-height:22px; color:#fa0101; letter-spacing:2px;">
+                                                        <h2>
+                                                            Issues:
+                                                            <br><br>
+                                                            <span id="issue" style="color:#ffffff;"></span>
+                                                            <br>
+                                                        </h2>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-size:0px; line-height:0px; height:15px;" height="15">
+                                                    &nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="font-family:'Open Sans', Arial, sans-serif; font-size:16px; line-height:22px; color:#07d4f8; letter-spacing:2px; padding-bottom:12px;"
+                                                    valign="top" align="center">Please look into the Test Environment
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:18px 20px;" class="em_padd" valign="top" bgcolor="#f6f7f8"
+                                    align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td style="font-family:'Open Sans', Arial, sans-serif; font-size:11px; line-height:18px; color:#999999;"
+                                                    valign="top" align="center">For any assistance with automation test
+                                                    execution,
+                                                    please contact:<br> Prashant (prashant.singh@kdi.kongsberg.com) or
+                                                    Yusuf(Mohamed.Yusuf@kdi.kongsberg.com)<br>
+                                                    For any other issues, Please connect with Anshul
+                                                    (anshul.lalit@kdi.kongsberg.com)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

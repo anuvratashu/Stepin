@@ -20,7 +20,7 @@ describe('KDI Framework Testing Testing', () => {
     it('Wrapper API Test', async () => {
         await step(1, "Test setp1", async () => {
             await browser.get('http://www.google.com')
-            await browser.sleep(2000);
+            await browser.sleep(20000);
         })
 
         await step(2, "Test setp2", async () => {

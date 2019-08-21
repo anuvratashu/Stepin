@@ -52,8 +52,8 @@ let configPlugin: ProtractorPlugin = {
         let testOutDir = browser.params.baseDir;
 
         browser.getCapabilities().then(cap => {
-            if (cap.get('platformName') !== "Android" || cap.get('platformName') !== "ios")
-                browser.manage().window().maximize();
+            // if (cap.get('platformName') !== "Android" || cap.get('platformName') !== "ios")
+            //     browser.manage().window().maximize();
 
             jasmine.getEnv().addReporter(new jasmineReporter.JUnitXmlReporter({
                 consolidateAll: true,
@@ -61,17 +61,17 @@ let configPlugin: ProtractorPlugin = {
                 savePath: path.join(browser.params.baseDir, 'reports/', cap.get("browserName"), '/jUnit')
             }));
 
-            var AllureReporter = require('jasmine-allure-reporter');
-            jasmine.getEnv().addReporter(new AllureReporter({
-                resultsDir: cap.get("browserName") + '/allure-results'
-            }));
+            // var AllureReporter = require('jasmine-allure-reporter');
+            // jasmine.getEnv().addReporter(new AllureReporter({
+            //     resultsDir: cap.get("browserName") + '/allure-results'
+            // }));
         })
         browser.manage().timeouts().implicitlyWait(5000);
 
-        // var AllureReporter = require('jasmine-allure-reporter');
-        // jasmine.getEnv().addReporter(new AllureReporter({
-        //     resultsDir: 'allure-results'
-        // }));
+        var AllureReporter = require('jasmine-allure-reporter');
+        jasmine.getEnv().addReporter(new AllureReporter({
+            resultsDir: 'allure-results'
+        }));
 
         // jasmine.getEnv().addReporter(new jasmineReporter.JUnitXmlReporter({
         //     consolidateAll: true,
