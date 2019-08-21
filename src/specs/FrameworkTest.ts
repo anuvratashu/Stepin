@@ -24,11 +24,9 @@ describe('KDI Framework Testing Testing', () => {
         })
 
         await step(2, "Test setp2", async () => {
-            expect(true).toBe(false, "Test1")
             await element(by.css('input[name="q"]')).sendKeys("IMDB");
             await browser.sleep(2000)
             expect(await element(by.css('input[name="q"]')).getAttribute("value")).toBe("IMDB")
-            expect(true).toBe(false, "Test2")
             await element.all(by.css('input[value="Google Search"]')).last().click();
         })
         //div[jsname="VlcLAe"] 

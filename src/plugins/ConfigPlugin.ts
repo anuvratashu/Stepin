@@ -6,11 +6,7 @@ import * as system from 'util';
 import * as child_process from 'child_process';
 import * as fileExists from 'file-exists';
 import * as jasmineReporter from 'jasmine-reporters';
-import * as SanitizeFilename from 'sanitize-filename';
 import { TrosPlugin } from './TrosPlugin';
-import { IEnvDetails } from 'kognifai-login';
-import io from 'socket.io-client';
-import { RealtimeReporter } from './RealtimeReporter';
 declare const allure: any;
 
 let snLogger = require('simple-node-logger').createSimpleFileLogger('./logs/protractor.log'),
@@ -102,7 +98,6 @@ let configPlugin: ProtractorPlugin = {
         //     }
         // });
 
-        jasmine.getEnv().addReporter(new RealtimeReporter(new URL("http://localhost:3000/")));
 
         //endregion
 
@@ -124,28 +119,6 @@ let configPlugin: ProtractorPlugin = {
         //     }
 
         // });
-
-        beforeAll(() => {
-            //Setting up environment for logging in
-            let tenant1: IEnvDetails = {
-                host: { aad: true, url: "https://vitenant1.kognifailabs.com" },
-                defaultUser: { userId: "automationtestuser@vitenant1.onmicrosoft.com", password: "Yobo47091" }
-            }
-            let login = require('kognifai-login').login;
-            let envIsSet = false;
-            process.argv.slice(3).some(arg => {
-                let name = arg.split('=')[0], value = arg.split('=')[1];
-                name = name.replace('--', '');
-                if (name === 'setenv') {
-                    login.setEnvironment(value);
-                    envIsSet = true;
-                    return true;
-                }
-                return false;
-            })
-            if (!envIsSet)
-                login.setEnvironment("DOVES")
-        })
     }
 };
 

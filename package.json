@@ -15,7 +15,8 @@
     "moment": "^2.20.1",
     "pngjs": "^3.2.0",
     "protractor": "^5.4.2",
-    "selenium-webdriver": "^4.0.0-alpha.1"
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "simple-node-logger": "^18.12.23"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.43",
@@ -31,7 +32,7 @@
     "tsc": "tsc",
     "build": "npm run clean & npm run tsc",
     "pretest": "npm run build & mkdirp logs",
-    "test": "protractor build/config.js"
+    "test": "protractor build-js/config.js"
   },
   "keywords": [
     "Protractor",

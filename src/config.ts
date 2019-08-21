@@ -37,6 +37,7 @@ let driverArgs = [
             //     enablePage: false/* ,
             //     enableTimeline: false */
             //   }
+
         },
         loggingPrefs: {
             driver: 'SEVERE',
@@ -44,11 +45,21 @@ let driverArgs = [
             browser: 'ALL',
             performance: 'ALL'
         }
-    },
+    },/* 
     firefox: {
         browserName: "firefox",
         marionette: true,
-    }/* ,
+    }, */
+    android: {
+        platformName: 'Android',
+        browserName: 'chrome',
+        //platformVersion: '4.4.2',
+        //deviceName: 'Pixel 2 XL',
+        deviceName: 'emulator-5554',
+        udid: 'emulator-5554',
+        nativeWebScreenshot: true,
+        androidScreenshotPath: 'target/screenshots'
+    }, /* ,
     ie: {
         browserName: 'internet explorer'
     },
@@ -59,6 +70,8 @@ let driverArgs = [
 
 export let config: Config =
 {
+    seleniumAddress: 'http://localhost:4723/wd/hub',
+    seleniumArgs: driverArgs,
     /* //Point to already running server
     seleniumAddress: 'http://localhost:4444/wd/hub',
     seleniumArgs: driverArgs, */
@@ -84,10 +97,10 @@ export let config: Config =
     // },
 
     multiCapabilities: [
-        capabilitiesMap.chrome,capabilitiesMap.firefox
+        capabilitiesMap.chrome, capabilitiesMap.android
     ],
 
-    directConnect: true,
+    //directConnect: true,
     SELENIUM_PROMISE_MANAGER: false,
     //restartBrowserBetweenTests: true, /*setting to true exposes the bug in the protractor/jasmine.*/
     useAllAngular2AppRoots: true,
